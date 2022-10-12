@@ -12,12 +12,24 @@ class Keyboards:
         self.markup = None
 
 
-    def set_btn(self, name: str) -> KeyboardButton:
+    def set_btn(self, name: str, request_location: bool = False) -> KeyboardButton:
         """
         Create and return button
         """
-        return KeyboardButton(KEYBOARD[name])
+        return KeyboardButton(KEYBOARD[name], request_location=request_location)
     
+
+    def start_menu(self) -> ReplyKeyboardMarkup:
+        """
+        Create markup when user write /start
+        """
+
+        # create markup
+        self.markup = ReplyKeyboardMarkup(True, True)
+        self.markup.row(self.set_btn('LOCATION', True))
+
+        return self.markup
+
 
     @staticmethod
     def remove_menu() -> None:

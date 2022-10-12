@@ -1,3 +1,4 @@
+from email import message
 from handlers.handler import Handler
 
 
@@ -16,7 +17,8 @@ class HandlerCommands(Handler):
         """
         self.bot.send_message(message.chat.id,
                               f'{message.from_user.first_name},'
-                              f' здравствуйте! Жду дальнейших задач.')
+                              f' здравствуйте! Жду дальнейших задач.',
+                              reply_markup=self.keyboard.start_menu())
     
 
     def pressed_help_btn(self, message):
@@ -36,19 +38,19 @@ class HandlerCommands(Handler):
 
     def handle(self):
 
-        @self.bot.message_handler(commands=['start'])
+        @self.bot.message_handler(commands=['start', 'help', 'menu'])
         def handle(message):
             if message.text == '/start':
                 self.pressed_start_btn(message)
-
-        
-        @self.bot.message_handler(commands=['help'])
-        def handle(message):
             if message.text == '/help':
                 self.pressed_help_btn(message)
-
-        
-        @self.bot.message_handler(commands=['menu'])
-        def handle(message):
             if message.text == '/menu':
                 self.pressed_menu_btn(message)
+
+        
+        
+
+        def handle(self):
+            @self.bot.message_handler(func=lambda message: True)
+            def handle(message):
+                pass
