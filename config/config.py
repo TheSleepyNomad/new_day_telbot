@@ -2,6 +2,7 @@ from emoji import emojize
 from os import getenv
 from dotenv import load_dotenv
 
+
 load_dotenv()
 
 # telegram bot config

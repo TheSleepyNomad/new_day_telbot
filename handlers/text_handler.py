@@ -3,7 +3,7 @@ from handlers.handler import Handler
 
 class HandlerText(Handler):
     """
-    Class work with commands /start, /help, /menu
+    Handler HandlerText response for work with buttons and text from user
     """
 
     def __init__(self, bot):

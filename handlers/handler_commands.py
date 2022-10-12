@@ -1,17 +1,16 @@
-from email import message
 from handlers.handler import Handler
 
 
 class HandlerCommands(Handler):
     """
-    Class work with commands /start, /help, /menu
+    This handler response for work and handle commands from user
     """
 
     def __init__(self, bot):
         super().__init__(bot)
 
 
-    def pressed_start_btn(self, message):
+    def pressed_start_btn(self, message) -> None:
         """
         if user write /start
         """
@@ -21,7 +20,7 @@ class HandlerCommands(Handler):
                               reply_markup=self.keyboard.start_menu())
     
 
-    def pressed_help_btn(self, message):
+    def pressed_help_btn(self, message) -> None:
         """
         if user write /help
         """
@@ -29,7 +28,7 @@ class HandlerCommands(Handler):
                               'Вы попали меню помощи')
 
     
-    def pressed_menu_btn(self, message):
+    def pressed_menu_btn(self, message) -> None:
         """
         if user write /help
         """
@@ -39,7 +38,7 @@ class HandlerCommands(Handler):
     def handle(self):
 
         @self.bot.message_handler(commands=['start', 'help', 'menu'])
-        def handle(message):
+        def handle(message) -> None:
             if message.text == '/start':
                 self.pressed_start_btn(message)
             if message.text == '/help':

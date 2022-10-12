@@ -5,7 +5,7 @@ from config.config import KEYBOARD
 
 class Keyboards:
     """
-    Класс Keyboards предназначен для создания разметки интерфейса
+    class Keyboards create menu markups and buttons
     """
 
     def __init__(self) -> None:
