@@ -5,7 +5,7 @@ from config.markup import Keyboards
 Класс родитель - следит за обязательным изменением метода handle
 """
 
-class Handler(ABCMeta):
+class Handler(metaclass=ABCMeta):
 
     def __init__(self, bot):
         self.bot = bot
