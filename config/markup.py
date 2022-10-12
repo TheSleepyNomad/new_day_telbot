@@ -1,6 +1,7 @@
 from telebot.types import KeyboardButton, ReplyKeyboardMarkup, \
     ReplyKeyboardRemove, InlineKeyboardMarkup, InlineKeyboardButton
-# from config.config import KEYBOARD
+from config.config import KEYBOARD
+
 
 class Keyboards:
     """
@@ -10,11 +11,14 @@ class Keyboards:
     def __init__(self) -> None:
         self.markup = None
 
-    def set_btn(self, name: int) -> KeyboardButton:
+
+    def set_btn(self, name: str) -> KeyboardButton:
         """
         Create and return button
         """
+        return KeyboardButton(KEYBOARD[name])
     
+
     @staticmethod
     def remove_menu() -> None:
         """
