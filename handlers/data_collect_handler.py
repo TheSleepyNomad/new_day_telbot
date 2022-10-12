@@ -1,7 +1,8 @@
+from pyexpat.errors import messages
 from handlers.handler import Handler
+from config.config import KEYBOARD
 
-
-class HandlerCommands(Handler):
+class HandlerDataCollecting(Handler):
     """
     Class work with commands /start, /help, /menu
     """
@@ -10,8 +11,12 @@ class HandlerCommands(Handler):
         super().__init__(bot)
 
 
+    def get_user_location(self, message):
+        self.bot.send_message(message.chat.id, "В будущем здесь будет функционал проверки записи на урок")
+
     def handle(self):
-        
+
         @self.bot.message_handler(content_types=["location"])
         def handle(message):
-            pass
+            print(message.location.longitude, message.location.latitude)
+            self.get_user_location(message)

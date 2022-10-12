@@ -1,7 +1,7 @@
 from handlers.handler import Handler
 
 
-class HandlerCommands(Handler):
+class HandlerText(Handler):
     """
     Class work with commands /start, /help, /menu
     """
@@ -11,7 +11,7 @@ class HandlerCommands(Handler):
 
 
     def handle(self):
-        
-        @self.bot.message_handler(content_types=["location"])
+
+        @self.bot.message_handler(func=lambda message: True)
         def handle(message):
             pass

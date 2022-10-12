@@ -46,11 +46,3 @@ class HandlerCommands(Handler):
                 self.pressed_help_btn(message)
             if message.text == '/menu':
                 self.pressed_menu_btn(message)
-
-        
-        
-
-        def handle(self):
-            @self.bot.message_handler(func=lambda message: True)
-            def handle(message):
-                pass
