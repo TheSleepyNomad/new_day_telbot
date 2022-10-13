@@ -1,10 +1,10 @@
 from dataclasses import dataclass
 from datetime import datetime
-from typing import TypeAlias
+# from typing import TypeAlias
 from enum import Enum
 
 
-Celsius: TypeAlias = int
+# Celsius: TypeAlias = int
 
 class WeatherType(str, Enum):
     THUNDERSTORM = "Гроза"
@@ -15,8 +15,8 @@ class WeatherType(str, Enum):
     FOG = "Туман"
     CLOUDS = "Облачно"
 
-@dataclass(slots=True, frozen=True)
-class UserCoordiates:
+@dataclass(frozen=True)
+class UserCoordinates:
     """
     temporary dataclass for storaging user location
     """
@@ -24,14 +24,14 @@ class UserCoordiates:
     latitude: float
 
 
-@dataclass(slots=True, frozen=True)
-class Weather:
-    """
-    temporary dataclass for storaging weather data
-    """
-    temperature: Celsius
-    weather_type: WeatherType
-    sunrise: datetime
-    sunset: datetime
-    city: str
+# @dataclass(slots=True, frozen=True)
+# class Weather:
+#     """
+#     temporary dataclass for storaging weather data
+#     """
+#     temperature: Celsius
+#     weather_type: WeatherType
+#     sunrise: datetime
+#     sunset: datetime
+#     city: str
 
