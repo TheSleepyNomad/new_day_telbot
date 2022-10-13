@@ -16,7 +16,7 @@ class HandlerDataCollecting(Handler):
         """
         get gps location from user
         """
-        self.bot.send_message(message.chat.id, "В будущем здесь будет функционал проверки записи на урок")
+        self.bot.send_message(message.chat.id, f"{message.location.longitude} and {message.location.latitude}")
 
 
     def handle(self) -> None:
