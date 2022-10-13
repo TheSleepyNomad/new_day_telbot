@@ -12,6 +12,7 @@ TELEGRAM_BOT_API_KEY = getenv('API_KEY')
 KEYBOARD = {
     'ADMIN_PANEL': emojize('⚙️ Админ панель'),
     'LOCATION': emojize(':globe_with_meridians: Задать координаты'),
+    'ABOUT_APP': emojize(':red_question_mark: О программе'),
     }
 
 # https://openweathermap.org/ API
