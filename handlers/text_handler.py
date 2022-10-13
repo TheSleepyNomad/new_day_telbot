@@ -29,6 +29,14 @@ class HandlerText(Handler):
                               reply_markup=self.keyboard.start_menu())
 
 
+    def pressed_exite_btn(self, message):
+        """
+        Обработка события нажатия на кнопку 'выход'
+        """
+        self.bot.send_message(message.chat.id, "Вы закрыли меню",
+                              reply_markup=self.keyboard.remove_menu())
+
+
     def handle(self):
 
         @self.bot.message_handler(func=lambda message: True)
@@ -38,3 +46,6 @@ class HandlerText(Handler):
 
             if message.text == KEYBOARD['<<']:
                 self.pressed_back_btn(message)
+
+            if message.text == KEYBOARD['EXITE']:
+                self.pressed_exite_btn(message)

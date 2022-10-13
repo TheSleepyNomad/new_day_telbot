@@ -28,6 +28,7 @@ class Keyboards:
         self.markup = ReplyKeyboardMarkup(True, True)
         self.markup.row(self.set_btn('LOCATION', True))
         self.markup.row(self.set_btn('ABOUT_APP'))
+        self.markup.row(self.set_btn('EXITE'))
 
         return self.markup
 

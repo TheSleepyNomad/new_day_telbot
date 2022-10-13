@@ -14,10 +14,12 @@ KEYBOARD = {
     'LOCATION': emojize(':globe_with_meridians: Задать координаты'),
     'ABOUT_APP': emojize(':red_question_mark: О программе'),
     '<<': emojize('⏪ Вернуться назад'),
+    'EXITE': emojize('🔽 Закрыть меню'),
     }
 
 # https://openweathermap.org/ API
 OPEN_WEATHER_API_KEY = getenv('OPENWEATHER_API_KEY')
+
 # url template for current weather request
 CURRENT_WEATHER_URL = (
     'https://api.openweathermap.org/data/2.5/weather?'
