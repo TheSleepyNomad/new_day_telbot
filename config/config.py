@@ -32,3 +32,4 @@ FIVE_DAYS_FORECAST_URL = (
 # other
 APP_VERSION = '0.0.1'
 CREATE_BY = 'Ilya "TheSleepyNomad" Pankov'
+AUTHOR_GITHUB_LINK = getenv('AUTHOR_GITHUB_LINK')
