@@ -32,6 +32,15 @@ class Keyboards:
         return self.markup
 
 
+    def about_app(self):
+        """
+        Create markup when pressed about_app button
+        """
+        self.markup = ReplyKeyboardMarkup(True, True)
+        self.markup.row(self.set_btn('<<'))
+
+        return self.markup    
+
     @staticmethod
     def remove_menu() -> None:
         """

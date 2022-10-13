@@ -26,9 +26,9 @@ about_app = """
 
 <b>Дополнительная информация:</b>
 
-<b>Версия бота: - </b><i>({})</i>
-<b>Разработчик: - </b><i>({})</i>
-<b>GITHUB: - </b><i>({})</i>
+<b>Версия бота: - </b><i>{}</i>
+<b>Разработчик: - </b><i>{}</i>
+<b>GITHUB: - </b><i>{}</i>
 """.format(APP_VERSION, CREATE_BY, AUTHOR_GITHUB_LINK)
 
 MESSAGES = {

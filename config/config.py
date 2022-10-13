@@ -13,6 +13,7 @@ KEYBOARD = {
     'ADMIN_PANEL': emojize('⚙️ Админ панель'),
     'LOCATION': emojize(':globe_with_meridians: Задать координаты'),
     'ABOUT_APP': emojize(':red_question_mark: О программе'),
+    '<<': emojize('⏪ Вернуться назад'),
     }
 
 # https://openweathermap.org/ API
