@@ -32,8 +32,14 @@ about_app = """
 <b>GITHUB: - </b><i>{}</i>
 """.format(APP_VERSION, CREATE_BY, AUTHOR_GITHUB_LINK)
 
+current_weather = """
+
+"""
+
+
 MESSAGES = {
     'start_message': start_message,
     'welcome_message': welcome_message,
     'about_app': about_app,
+    'current_weather': current_weather,
 }
